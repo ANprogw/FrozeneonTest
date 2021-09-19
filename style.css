@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'LeksaSans';
+  src: url("fonts/LeksaSans-Bold.eot");
+  src: local("☺"), url("fonts/LeksaSans-Bold.woff") format("woff"), url("fonts/LeksaSans-Bold.ttf") format("truetype"), url("fonts/LeksaSans-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: bold;
+}
+
+body {
+  margin: 0;
+  font-family: 'LeksaSans';
+  background: #16151F;
+}
+
+.shop {
+  height: 2000px;
+  background: url(img/shop/shop-bg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+/*# sourceMappingURL=style.css.map */

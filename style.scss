@@ -1,0 +1,126 @@
+@font-face {
+	font-family: 'LeksaSans';
+	src: url('fonts/LeksaSans-Bold.eot');
+	src: local('☺'), url('fonts/LeksaSans-Bold.woff') format('woff'), url('fonts/LeksaSans-Bold.ttf') format('truetype'), url('fonts/LeksaSans-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: bold;
+}
+
+body{
+    margin: 0;
+    font-family: 'LeksaSans';
+    background: #16151F;
+}
+
+.shop {
+    height: 2000px;
+
+    background: url(img/shop/shop-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    &__tabs-container {
+    }
+
+    &__tab {
+    }
+
+    &__tab-text-container {
+    }
+
+    &__tab-text {
+    }
+
+    &__tab-underline {
+    }
+
+    &__shopping-area {
+    }
+
+    &__title {
+    }
+
+    &__items-container {
+    }
+
+    &__item {
+    }
+
+    &__item-icon {
+    }
+
+    &__item-info {
+    }
+
+    &__item-value {
+    }
+
+    &__item-text {       
+    }
+
+    &__item-bonus-ribbon {
+    }
+
+    &__item-bonus-info {
+    }
+
+    &__item-bonus-icon {
+    }
+
+    &__item-bonus-value {
+    }
+}
+.header {
+
+    &__body {
+    }
+
+    &__credits-container {
+    }
+}
+.nav-button {
+
+    &__icon {
+    }
+
+    &__text {
+    }
+}
+.credits-button {
+
+    &__block {
+    }
+
+    &__item-icon {
+    }
+
+    &__text-block {
+    }
+
+    &__value {
+    }
+
+    &__text {
+    }
+
+    &__add-icon {
+    }
+}
+.item-button {
+
+    &__block {
+    }
+
+    &__text {
+    }
+
+    &__price-block {
+    }
+
+    &__icon {
+    }
+
+    &__value {
+    }
+}
