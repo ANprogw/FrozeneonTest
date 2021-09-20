@@ -106,6 +106,7 @@ body{
     }
 
     &__item {
+        position: relative;
         width: 217px;
         height: 299px;
         display: flex;
@@ -140,16 +141,35 @@ body{
     }
 
     &__item-bonus-ribbon {
-        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 96px;
+        height: 78px;
+        background: url(img/shop/bonus-ribbon.svg);
     }
 
     &__item-bonus-info {
+        position: absolute;
+        top: 20px;
+        left: 3px;
+        width: 51px;
+        height: 21px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: rotate(-42.41deg);
     }
 
     &__item-bonus-icon {
     }
 
     &__item-bonus-value {
+        font-size: 13px;
+        font-family: 'Roboto';
+        font-weight: 700;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+        
     }
 }
 

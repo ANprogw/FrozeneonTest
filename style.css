@@ -146,6 +146,7 @@ body {
 }
 
 .shop__item {
+  position: relative;
   width: 217px;
   height: 299px;
   display: -webkit-box;
@@ -196,7 +197,38 @@ body {
 }
 
 .shop__item-bonus-ribbon {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 96px;
+  height: 78px;
+  background: url(img/shop/bonus-ribbon.svg);
+}
+
+.shop__item-bonus-info {
+  position: absolute;
+  top: 20px;
+  left: 3px;
+  width: 51px;
+  height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(-42.41deg);
+          transform: rotate(-42.41deg);
+}
+
+.shop__item-bonus-value {
+  font-size: 13px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
 }
 
 .header {
