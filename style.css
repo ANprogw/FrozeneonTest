@@ -286,6 +286,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 50px;
+}
+
+.nav-button:hover {
+  background-color: rgba(64, 54, 73, 0.5);
 }
 
 .nav-button_back-bg {
@@ -336,6 +341,10 @@ body {
           align-items: center;
   border-radius: 100px;
   background-color: rgba(13, 11, 15, 0.5);
+}
+
+.credits-button__block:hover {
+  background-color: rgba(64, 54, 73, 0.5);
 }
 
 .credits-button__item-icon {
