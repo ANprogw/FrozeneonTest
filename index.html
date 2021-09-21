@@ -4,6 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
         <title>AN Nethernite Test</title>
     </head>
     <body>
@@ -59,7 +60,7 @@
                 </div>
             </div>
             <div class="shop__tabs-container">
-                <div class="shop__tab">
+                <div class="shop__tab tab" data-tab-target="#home">
                     <div class="shop__tab-text-container">
                         <div class="shop__tab-text">Монстр Боксы</div>
                     </div>
@@ -67,7 +68,7 @@
                         <div class="shop__tab-underline-2"></div>
                     </div>
                 </div>
-                <div class="shop__tab">
+                <div class="shop__tab tab active" data-tab-target="#back">
                     <div class="shop__tab-text-container">
                         <div class="shop__tab-text">Банк</div>
                     </div>
@@ -101,7 +102,7 @@
                 </div>
             </div>  
             <div class="shop__shopping-area-container">
-                <div class="shop__shopping-area">
+                <div class="shop__shopping-area" id="home" data-tab-content>
                     <div class="shop__section shop__section_border-top_off">
                         <div class="title shop__title">Кристаллы Незера</div>
                         <div class="shop__items-container">
@@ -533,9 +534,267 @@
                         </div>                    
                     </div>
                 </div>
-            </div>               
+                <div class="shop__shopping-area active" id="back" data-tab-content> 
+                    <div class="shop__section shop__section_border-top_off">
+                        <div class="title shop__title">Кристаллы Незера</div>
+                        <div class="shop__items-container">
+                            <div class="shop__item">
+                                <div class="shop__item-icon">
+                                    <img src="img/shop/x100-crystal.svg" alt="crystal">
+                                </div>
+                                <div class="shop__item-info">
+                                    <div class="shop__item-value">x100</div>
+                                    <div class="shop__item-text">Handful of Coins</div>
+                                </div>                 
+                                <div class="item-button">
+                                    <div class="item-button__block">
+                                        <div class="item-button__text">Купить</div>
+                                        <div class="item-button__price-block">
+                                            <div class="item-button__icon">
+                                                <img src="img/item-button/dollar-icon.svg" alt="dollar icon">
+                                            </div>
+                                            <div class="item-button__value">10</div>
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <div class="shop__item-bonus-ribbon">
+                                    <div class="shop__item-bonus-info">
+                                        <div class="shop__item-bonus-icon">
+                                            <img src="img/shop/small-coin.svg" alt="coin icon">
+                                        </div>
+                                        <div class="shop__item-bonus-value">x500</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop__item">
+                                <div class="shop__item-icon">
+                                    <img src="img/shop/x500-crystal.svg" alt="crystal">
+                                </div>
+                                <div class="shop__item-info">
+                                    <div class="shop__item-value">x500</div>
+                                    <div class="shop__item-text">Handful of Coins</div>
+                                </div>                 
+                                <div class="item-button">
+                                    <div class="item-button__block">
+                                        <div class="item-button__text">Купить</div>
+                                        <div class="item-button__price-block">
+                                            <div class="item-button__icon">
+                                                <img src="img/item-button/dollar-icon.svg" alt="dollar icon">
+                                            </div>
+                                            <div class="item-button__value">10</div>
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <div class="shop__item-bonus-ribbon">
+                                    <div class="shop__item-bonus-info">
+                                        <div class="shop__item-bonus-icon">
+                                            <img src="img/shop/small-coin.svg" alt="coin icon">
+                                        </div>
+                                        <div class="shop__item-bonus-value">x500</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop__item">
+                                <div class="shop__item-icon">
+                                    <img src="img/shop/x1000-crystal.svg" alt="crystal">
+                                </div>
+                                <div class="shop__item-info">
+                                    <div class="shop__item-value">x1000</div>
+                                    <div class="shop__item-text">Handful of Coins</div>
+                                </div>                 
+                                <div class="item-button">
+                                    <div class="item-button__block">
+                                        <div class="item-button__text">Купить</div>
+                                        <div class="item-button__price-block">
+                                            <div class="item-button__icon">
+                                                <img src="img/item-button/dollar-icon.svg" alt="dollar icon">
+                                            </div>
+                                            <div class="item-button__value">10</div>
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <div class="shop__item-bonus-ribbon">
+                                    <div class="shop__item-bonus-info">
+                                        <div class="shop__item-bonus-icon">
+                                            <img src="img/shop/small-coin.svg" alt="coin icon">
+                                        </div>
+                                        <div class="shop__item-bonus-value">x750k</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop__item">
+                                <div class="shop__item-icon">
+                                    <img src="img/shop/x1500-crystal.svg" alt="crystal">
+                                </div>
+                                <div class="shop__item-info">
+                                    <div class="shop__item-value">x1500</div>
+                                    <div class="shop__item-text">Handful of Coins</div>
+                                </div>                 
+                                <div class="item-button">
+                                    <div class="item-button__block">
+                                        <div class="item-button__text">Купить</div>
+                                        <div class="item-button__price-block">
+                                            <div class="item-button__icon">
+                                                <img src="img/item-button/dollar-icon.svg" alt="dollar icon">
+                                            </div>
+                                            <div class="item-button__value">10</div>
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <div class="shop__item-bonus-ribbon">
+                                    <div class="shop__item-bonus-info">
+                                        <div class="shop__item-bonus-icon">
+                                            <img src="img/shop/small-coin.svg" alt="coin icon">
+                                        </div>
+                                        <div class="shop__item-bonus-value">x500</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop__item">
+                                <div class="shop__item-icon">
+                                    <img src="img/shop/x100-crystal.svg" alt="crystal">
+                                </div>
+                                <div class="shop__item-info">
+                                    <div class="shop__item-value">x100</div>
+                                    <div class="shop__item-text">Handful of Coins</div>
+                                </div>                 
+                                <div class="item-button">
+                                    <div class="item-button__block">
+                                        <div class="item-button__text">Купить</div>
+                                        <div class="item-button__price-block">
+                                            <div class="item-button__icon">
+                                                <img src="img/item-button/dollar-icon.svg" alt="dollar icon">
+                                            </div>
+                                            <div class="item-button__value">10</div>
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <div class="shop__item-bonus-ribbon">
+                                    <div class="shop__item-bonus-info">
+                                        <div class="shop__item-bonus-icon">
+                                            <img src="img/shop/small-coin.svg" alt="coin icon">
+                                        </div>
+                                        <div class="shop__item-bonus-value">x500</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop__item">
+                                <div class="shop__item-icon">
+                                    <img src="img/shop/x500-crystal.svg" alt="crystal">
+                                </div>
+                                <div class="shop__item-info">
+                                    <div class="shop__item-value">x500</div>
+                                    <div class="shop__item-text">Handful of Coins</div>
+                                </div>                 
+                                <div class="item-button">
+                                    <div class="item-button__block">
+                                        <div class="item-button__text">Купить</div>
+                                        <div class="item-button__price-block">
+                                            <div class="item-button__icon">
+                                                <img src="img/item-button/dollar-icon.svg" alt="dollar icon">
+                                            </div>
+                                            <div class="item-button__value">10</div>
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <div class="shop__item-bonus-ribbon">
+                                    <div class="shop__item-bonus-info">
+                                        <div class="shop__item-bonus-icon">
+                                            <img src="img/shop/small-coin.svg" alt="coin icon">
+                                        </div>
+                                        <div class="shop__item-bonus-value">x500</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop__item">
+                                <div class="shop__item-icon">
+                                    <img src="img/shop/x1000-crystal.svg" alt="crystal">
+                                </div>
+                                <div class="shop__item-info">
+                                    <div class="shop__item-value">x1000</div>
+                                    <div class="shop__item-text">Handful of Coins</div>
+                                </div>                 
+                                <div class="item-button">
+                                    <div class="item-button__block">
+                                        <div class="item-button__text">Купить</div>
+                                        <div class="item-button__price-block">
+                                            <div class="item-button__icon">
+                                                <img src="img/item-button/dollar-icon.svg" alt="dollar icon">
+                                            </div>
+                                            <div class="item-button__value">10</div>
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <div class="shop__item-bonus-ribbon">
+                                    <div class="shop__item-bonus-info">
+                                        <div class="shop__item-bonus-icon">
+                                            <img src="img/shop/small-coin.svg" alt="coin icon">
+                                        </div>
+                                        <div class="shop__item-bonus-value">x750k</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop__item">
+                                <div class="shop__item-icon">
+                                    <img src="img/shop/x1500-crystal.svg" alt="crystal">
+                                </div>
+                                <div class="shop__item-info">
+                                    <div class="shop__item-value">x1500</div>
+                                    <div class="shop__item-text">Handful of Coins</div>
+                                </div>                 
+                                <div class="item-button">
+                                    <div class="item-button__block">
+                                        <div class="item-button__text">Купить</div>
+                                        <div class="item-button__price-block">
+                                            <div class="item-button__icon">
+                                                <img src="img/item-button/dollar-icon.svg" alt="dollar icon">
+                                            </div>
+                                            <div class="item-button__value">10</div>
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <div class="shop__item-bonus-ribbon">
+                                    <div class="shop__item-bonus-info">
+                                        <div class="shop__item-bonus-icon">
+                                            <img src="img/shop/small-coin.svg" alt="coin icon">
+                                        </div>
+                                        <div class="shop__item-bonus-value">x500</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop__item">
+                                <div class="shop__item-icon">
+                                    <img src="img/shop/x100-crystal.svg" alt="crystal">
+                                </div>
+                                <div class="shop__item-info">
+                                    <div class="shop__item-value">x100</div>
+                                    <div class="shop__item-text">Handful of Coins</div>
+                                </div>                 
+                                <div class="item-button">
+                                    <div class="item-button__block">
+                                        <div class="item-button__text">Купить</div>
+                                        <div class="item-button__price-block">
+                                            <div class="item-button__icon">
+                                                <img src="img/item-button/dollar-icon.svg" alt="dollar icon">
+                                            </div>
+                                            <div class="item-button__value">10</div>
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <div class="shop__item-bonus-ribbon">
+                                    <div class="shop__item-bonus-info">
+                                        <div class="shop__item-bonus-icon">
+                                            <img src="img/shop/small-coin.svg" alt="coin icon">
+                                        </div>
+                                        <div class="shop__item-bonus-value">x500</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>               
+                </div>   
+            </div>            
         </div>
-        <script></script>
     </body>
 </html>
 

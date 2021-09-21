@@ -717,4 +717,14 @@ body {
     font-size: 11px;
   }
 }
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=style.css.map */
