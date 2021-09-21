@@ -20,7 +20,8 @@ body {
 }
 
 .shop {
-  max-width: 1366px;
+  /*max-width: 1366px;*/
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,6 +49,7 @@ body {
           align-items: center;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 20;
 }
 
 .shop__tab {
@@ -68,6 +70,7 @@ body {
           align-items: center;
   border-radius: 10px 10px 0px 0px;
   background: #212031;
+  cursor: pointer;
 }
 
 .shop__tab:hover {
@@ -117,9 +120,22 @@ body {
   background: linear-gradient(90deg, #f52cbf 0%, #ff7c46 100%);
 }
 
-.shop__shopping-area {
+.shop__shopping-area-container {
   width: 980px;
   height: 560px;
+  background: #242333;
+  -webkit-box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.shop__shopping-area {
+  display: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,15 +146,36 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #242333;
-  -webkit-box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
-  border-radius: 0px 0px 10px 10px;
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #242333), to(transparent));
   -webkit-mask-image: linear-gradient(to bottom, #242333 50%, transparent 100%);
   /* ideally need to be removed when scrolled to the end */
   mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #242333), to(transparent));
   mask-image: linear-gradient(to bottom, #242333 50%, transparent 100%);
+  overflow-y: scroll;
+}
+
+.shop__shopping-area::-webkit-scrollbar {
+  display: none;
+}
+
+.shop__section {
+  width: 100%;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid rgba(151, 148, 198, 0.1);
+}
+
+.shop__section_border-top_off {
+  border-top: 0px;
 }
 
 .shop__title {
@@ -152,7 +189,6 @@ body {
 
 .shop__items-container {
   width: 928px;
-  padding-bottom: 100px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (217px)[4];
@@ -163,11 +199,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   grid-row-gap: 20px;
-  overflow-y: scroll;
-}
-
-.shop__items-container::-webkit-scrollbar {
-  display: none;
 }
 
 .shop__item {
@@ -257,6 +288,7 @@ body {
 }
 
 .header {
+  width: 100%;
   height: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,6 +300,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background: url(img/shop/header-bg.svg), #16151F;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .header__body {
@@ -312,6 +347,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .nav-button:hover {
@@ -354,6 +390,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .credits-button__block {
@@ -427,6 +464,12 @@ body {
   border-radius: 146px;
   background: -webkit-gradient(linear, left top, right top, from(#242333), to(#3C3B53)) padding-box, -webkit-gradient(linear, left top, right top, from(#682FBD), to(#CB4CBC)) border-box;
   background: linear-gradient(90deg, #242333 0%, #3C3B53 100%) padding-box, linear-gradient(90deg, #682FBD 0%, #CB4CBC 100%) border-box;
+  cursor: pointer;
+}
+
+.item-button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#682FBD), to(#CB4CBC)) padding-box, -webkit-gradient(linear, left top, right top, from(#682FBD), to(#CB4CBC)) border-box;
+  background: linear-gradient(90deg, #682FBD 0%, #CB4CBC 100%) padding-box, linear-gradient(90deg, #682FBD 0%, #CB4CBC 100%) border-box;
 }
 
 .item-button__block {
