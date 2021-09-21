@@ -17,7 +17,6 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   color: white;
-  font-size: 18px;
 }
 
 .shop {
@@ -98,6 +97,7 @@ body {
 }
 
 .shop__tab-text {
+  font-size: 20px;
   color: rgba(151, 148, 198, 0.5);
 }
 
@@ -134,15 +134,40 @@ body {
   -webkit-box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 10px 10px;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #242333), to(transparent));
+  -webkit-mask-image: linear-gradient(to bottom, #242333 50%, transparent 100%);
+  /* ideally need to be removed when scrolled to the end */
+  mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #242333), to(transparent));
+  mask-image: linear-gradient(to bottom, #242333 50%, transparent 100%);
 }
 
 .shop__title {
+  /*width: 100%;
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;*/
   margin: 24px 0;
 }
 
 .shop__items-container {
   width: 928px;
-  /*grid*/
+  padding-bottom: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (217px)[4];
+      grid-template-columns: repeat(4, 217px);
+  -ms-grid-rows: (299px)[auto-fill];
+      grid-template-rows: repeat(auto-fill, 299px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-row-gap: 20px;
+  overflow-y: scroll;
+}
+
+.shop__items-container::-webkit-scrollbar {
+  display: none;
 }
 
 .shop__item {
@@ -314,6 +339,10 @@ body {
           align-items: center;
 }
 
+.nav-button__text {
+  font-size: 20px;
+}
+
 .credits-button {
   width: 210px;
   display: -webkit-box;
@@ -349,6 +378,20 @@ body {
 
 .credits-button__item-icon {
   margin-left: -40px;
+}
+
+.credits-button__text-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.credits-button__value {
+  font-size: 18px;
 }
 
 .credits-button__text {
