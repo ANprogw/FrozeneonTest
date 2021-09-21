@@ -222,6 +222,10 @@ body{
         background-size: cover;
     }
 
+    &__item-bonus-ribbon_hidden{
+        display: none;
+    }
+
     &__item-bonus-info {
         position: absolute;
         top: 20px;
@@ -299,10 +303,6 @@ body{
             height: 66px;
         }
 
-        &__item-bonus-ribbon_hidden{
-            width: 200px;
-        }
-
         &__item-bonus-info {
             top: 13px;
             left: 0;
@@ -367,9 +367,10 @@ body{
     align-items: center;
     border-radius: 50px;
     cursor: pointer;
+    transition: all 100ms;
 
     &:hover{
-        /*background-color: rgba(64, 54, 73, 0.5);*/
+        margin-top: 5px;
     }
     
     &_back-bg {

@@ -295,6 +295,10 @@ body {
   background-size: cover;
 }
 
+.shop__item-bonus-ribbon_hidden {
+  display: none;
+}
+
 .shop__item-bonus-info {
   position: absolute;
   top: 20px;
@@ -369,9 +373,6 @@ body {
   .shop__item-bonus-ribbon {
     width: 70px;
     height: 66px;
-  }
-  .shop__item-bonus-ribbon_hidden {
-    width: 200px;
   }
   .shop__item-bonus-info {
     top: 13px;
@@ -458,10 +459,12 @@ body {
           align-items: center;
   border-radius: 50px;
   cursor: pointer;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
 }
 
 .nav-button:hover {
-  /*background-color: rgba(64, 54, 73, 0.5);*/
+  margin-top: 5px;
 }
 
 .nav-button_back-bg {
