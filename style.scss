@@ -12,21 +12,24 @@ $breakpoint1: 1050;
 $breakpoint2: 991.98;
 $breakpoint3: 767.98;
 $breakpoint4: 479.98;
+$gridspacing: 20;
 $card-width: 217;
 $card-height: 299;
+$smallcard-width: 124;
+$smallcard-height: 171;
 
 body{
     margin: 0;
     font-family: 'LeksaSans';
     background: url(img/shop/shop-bg.svg), #16151F;
-    background-size: cover; /* contain */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     color: white;
 }
 
 .shop {
-    /*max-width: 1366px;*/  
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -112,7 +115,7 @@ body{
 
     &__shopping-area-container{
         width: 980px;
-        height: 560px;
+        height: calc(100vh - 204px);
         background: #242333;
         box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
         border-radius: 0px 0px 10px 10px;
@@ -150,24 +153,19 @@ body{
     }
 
     &__title {
-        /*width: 100%;
-        height: 85px;
-        display: flex;
-        justify-content: center;
-        align-items: center;*/
         margin: 24px 0;
     }
 
     &__items-container {
         box-sizing: border-box;
         width: 100%;
-        padding: 0 20px;
+        padding: 0 $gridspacing+px;
         display: grid;
         grid-template-columns: repeat(4, $card-width+px); 
         grid-template-rows: repeat(auto-fill, $card-height+px);
         justify-content: center;
-        grid-row-gap: 20px;   
-        grid-column-gap: 20px;               
+        grid-row-gap: $gridspacing+px;   
+        grid-column-gap: $gridspacing+px;               
     }
 
     &__item {
@@ -217,6 +215,7 @@ body{
         width: 96px;
         height: 78px;
         background: url(img/shop/bonus-ribbon.svg);
+        background-size: cover;
     }
 
     &__item-bonus-info {
@@ -241,11 +240,17 @@ body{
         text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);       
     }
 
+    @media (min-height: 1750px){
+
+        &__shopping-area-container{
+            height: fit-content;
+        }
+    }
+
     @media (max-width: $breakpoint1+px){
         
         &__shopping-area-container{
             width: calc(100% - 80px);
-            height: 560px;
             border-radius: 10px 10px 10px 10px;
         }
 
@@ -255,13 +260,19 @@ body{
     }
 
     @media (max-width: $breakpoint3+px){
+
+        &__shopping-area-container{
+            height: calc(100vh - 164px);
+        }
         
-        $card-width: 124;
-        $card-height: 171;
+        &__items-container {
+            grid-template-columns: repeat(auto-fill, $smallcard-width+px);
+            grid-template-rows: repeat(auto-fill, $smallcard-height+px);         
+        }
         
         &__item{
-            width: $card-width+px;
-            height: $card-height+px;
+            width: $smallcard-width+px;
+            height: $smallcard-height+px;
             background: url(img/shop/shop-item-bg-small.svg);
             background-position: top -8px left -18px;
         }
@@ -277,6 +288,29 @@ body{
     
         &__item-text {     
             font-size: 11px;
+        }
+
+        &__item-bonus-ribbon {
+            width: 70px;
+            height: 66px;
+        }
+
+        &__item-bonus-info {
+            top: 13px;
+            left: 0;
+        }
+    }
+
+    @media (max-width: $breakpoint4+px){
+        
+        &__title{
+            display: none;
+        }
+
+        &__items-container {
+            padding: ($gridspacing/2)+px ($gridspacing/2)+px 0;
+            grid-row-gap: ($gridspacing/2)+px;   
+            grid-column-gap: ($gridspacing/2)+px;               
         }
     }
 }
@@ -301,8 +335,6 @@ body{
     }
 
     &__credits-container {
-        max-width: 455px;
-        min-width: 218px;
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -310,7 +342,12 @@ body{
     }
 
     @media (max-width: $breakpoint3+px){
+        
         height: 50px;
+
+        &__credits-container{
+            width: 218px;
+        }
     }
 }
 
@@ -464,7 +501,12 @@ body{
 }
 
 .title {
+
     font-size: 30px;
+
+    @media (max-width: $breakpoint3+px){
+        font-size: 22px;
+    }
 }
 
 .item-button {
@@ -508,6 +550,11 @@ body{
     }
 
     &__icon {
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
     }
 
     &__value {
@@ -527,6 +574,10 @@ body{
 
         &__text{
             font-size: 11px;
+        }
+
+        &__price-block {
+            width: 24px;
         }
 
         &__value{
