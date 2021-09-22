@@ -476,12 +476,17 @@ body {
           align-items: center;
   border-radius: 50px;
   cursor: pointer;
-  -webkit-transition: all 100ms;
-  transition: all 100ms;
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
 
-.nav-button:hover {
-  margin-top: 5px;
+.nav-button:hover .nav-button__icon img {
+  -webkit-filter: drop-shadow(0 0 1px white);
+          filter: drop-shadow(0 0 1px white);
+}
+
+.nav-button:hover .nav-button__text {
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 .nav-button_back-bg {
