@@ -20,7 +20,7 @@ $smallcard-height: 171;
 
 body{
     margin: 0;
-    font-family: 'LeksaSans';
+    /*font-family: 'LeksaSans';*/
     background: url(img/shop/shop-bg.svg), #16151F;
     background-size: cover;
     background-repeat: no-repeat;
@@ -385,10 +385,10 @@ body{
     align-items: center;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 100ms;
+    /*transition: all 100ms;*/
 
-    &:hover{
-        margin-top: 5px;
+    &:hover &__block {
+        background-color: red;        
     }
     
     &_back-bg {
