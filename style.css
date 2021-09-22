@@ -476,8 +476,6 @@ body {
           align-items: center;
   border-radius: 50px;
   cursor: pointer;
-  -webkit-transition: all 2s;
-  transition: all 2s;
 }
 
 .nav-button:hover .nav-button__icon img {
@@ -486,7 +484,7 @@ body {
 }
 
 .nav-button:hover .nav-button__text {
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 2px 1px rgba(255, 255, 255, 0.5);
 }
 
 .nav-button_back-bg {
@@ -568,6 +566,11 @@ body {
 
 .credits-button__block:hover {
   background-color: rgba(64, 54, 73, 0.5);
+}
+
+.credits-button__block:hover .credits-button__add-icon img {
+  -webkit-filter: drop-shadow(0 0 4px #21CC14);
+          filter: drop-shadow(0 0 4px #21CC14);
 }
 
 .credits-button__item-icon {
@@ -702,18 +705,22 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.item-button__icon {
+  height: 13px;
+}
+
 .item-button__icon img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .item-button__value {

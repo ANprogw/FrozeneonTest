@@ -384,7 +384,6 @@ body{
     align-items: center;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 2s;
 
     &:hover &__icon{
         img{
@@ -393,7 +392,7 @@ body{
     }
 
     &:hover &__text{
-        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+        text-shadow: 1px 2px 1px rgba(255, 255, 255, 0.5);
     }
     
     &_back-bg {
@@ -459,6 +458,12 @@ body{
         
         &:hover{
             background-color: rgba(64, 54, 73, 0.5);
+        }
+
+        &:hover .credits-button__add-icon{
+            img{
+                filter: drop-shadow(0 0 4px #21CC14);
+            }        
         }
     }
 
@@ -555,6 +560,7 @@ body{
     cursor: pointer;
                
     &:hover{
+
         background: linear-gradient(90deg, #682FBD 0%, #CB4CBC 100%) padding-box,
                     linear-gradient(90deg, #682FBD 0%, #CB4CBC 100%) border-box;
     }
@@ -577,15 +583,18 @@ body{
         width: 27.71px;
         height: 17px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
 
     &__icon {
 
+        height: 13px;
+
         img {
             width: 100%;
-            object-fit: contain;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
