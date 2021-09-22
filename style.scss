@@ -52,6 +52,8 @@ body{
     }
 
     &__tab {
+        $p: &;
+
         width: 188px;
         height: 54px;
         display: flex;
@@ -60,8 +62,7 @@ body{
         align-items: center;
         border-radius: 10px 10px 0px 0px;
         background: #212031;
-        cursor: pointer;
-        
+        cursor: pointer;   
 
         &:hover{
             background-color: rgb(38, 37, 55);  
@@ -78,6 +79,19 @@ body{
         @media (max-width: $breakpoint1+px){
             width: 100%;
             border-radius: 0; 
+        }
+    }
+
+    &__tab_status_active{
+
+        background-color: rgb(38, 37, 55);
+
+        #{$p}-text{
+            color: white;
+        }
+
+        #{$p}-underline-1{
+            display: inline;
         }
     }
 
@@ -133,6 +147,10 @@ body{
         -webkit-mask-image: linear-gradient(to bottom, #242333 50%, transparent 100%); /* ideally need to be removed when scrolled to the end */
         mask-image: linear-gradient(to bottom, #242333 50%, transparent 100%);
         overflow-y: scroll; 
+    }
+
+    &__shopping-area_status_active[data-tab-content] {
+        display: flex;
     }
 
     &__shopping-area::-webkit-scrollbar {
@@ -597,8 +615,4 @@ body{
 
 [data-tab-content] {
     display: none;
-}
-  
-.active[data-tab-content] {
-    display: flex;
 }
