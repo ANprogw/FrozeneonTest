@@ -1,3 +1,3 @@
 # FrozeneonTest
 
-Test task made for Frozeneon company
+Shopping page, test task made for Frozeneon company
